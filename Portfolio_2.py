@@ -1,42 +1,41 @@
-#Create a simple application in Python that identifies prime numbers within a specified range
-#The application should allow users to input two numbers, representing the start and end of a range, and then output all the prime numbers within that range
+#Create a matrix calculator that performs basic operations on user-inputted matrices
 
-import math
+#Ask the user to enter two lists
+#Create matrix from list 1
+#Create matrix from list 2
+#Multiple list 1 by list 2
+#Subtract list 1 from list 2
+#Add list 1 and list 2
 
-#Create a function to identify prime numbers
-def is_prime(n):
-    # check for even numbers
-    if n % 2 == 0 and n > 2: 
-        return False
+#Import numpy
+import numpy as np
 
-    # loop through odd numbers
-    for i in range(3, int(math.sqrt(n)) + 1, 2):
-        # check if it has a remainder
-        if n % i == 0:
-            return False
-        
-    return True
+#Function to get user input and add to empty list_1 and list_2
+def get_user_matrix():
+    list_1 = []
+    list_2 = []
+    for list in [list_1, list_2]:
+#Apend 2 user imputted integers to each list 
+        for x in range(0,2):
+            user_item = int(input("Enter a number: "))
+            list.append(user_item)
+#Create matrix from the two lists
+    return np.array([list_1, list_2])
 
-#Create a function to get and validate input
-def get_number():
-    while True:
-        try:
-            num = int(input("Please enter a number: "))
-            return num
-        except ValueError:
-            print("Input must be an integer")
+#Create 2 matrix, x and y, using the function above
+x = get_user_matrix()
+print(x)
+y = get_user_matrix()
+print(y)
 
-    
-#Ask the user to input start range number and validate input
-start_number = get_number()
+#Matrix multiplication
+matrix_multiply = np.dot(x, y)
+print(matrix_multiply)
 
-#Ask the user to input the end range number and validate input
-end_number = get_number()
+#Matrix subtraction
+matrix_subtraction = y - x
+print(matrix_subtraction)
 
-#For values in range of inputted numbers, calculate those that are prime
-for n in range(start_number, end_number):
-    if is_prime(n):
-        print(f"{n} is a prime number")
-    
-
-
+#Matrix addition 
+matrix_addition = x + y
+print(matrix_addition)
