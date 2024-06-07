@@ -38,3 +38,6 @@ Following successful account creation, select option 2 from the menu and log in 
 *Delete Task:*  Use option 5 to delete a task. Select the task number you would like to delete.
 
 *Quit:*  Use option 6 to quit application.
+
+### Acknowledgements 
+This code was writen by me. 
