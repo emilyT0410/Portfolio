@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}View Sticky Note{% endblock %}
+
+{% block body %}
+<div class="view-note-page">
+    <h1><b>{{ note.title }}</b></h1>
+    <p>{{ note.description }}</p>
+    <p><b>Created:</b> {{ note.created_at }}</p>
+    <a class="edit-note-button" href="{% url 'edit_note' note.id %}">Edit</a>
+    <a class="delete-note-button" href="{% url 'delete_note' note.id %}">Delete</a>
+    <a class="back-button" href="{% url 'index' %}">Back to Notice Board</a>
+    </div>
+{% endblock %}

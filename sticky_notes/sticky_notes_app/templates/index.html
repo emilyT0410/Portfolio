@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Notice Board{% endblock %}
+
+{% block body %}
+<div class="index-page">
+    <h1>Notice Board</h1>
+    <u1>
+        {% for note in notes %}
+        <li><a class="sticky-note" href="{% url 'view_note' note.id %}">{{ note.title }}</a></li>
+        {% endfor %}
+    </u1>
+        <a class="add-note-button" href="{% url 'add_note' %}">Create New Sticky Note</a>
+    {% if request.user.is_authenticated %}
+        <a class="back-button" href="{% url 'logout' %}">Logout</a>
+    {% endif %}
+</div>
+{% endblock %}
