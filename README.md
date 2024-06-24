@@ -12,6 +12,10 @@ Welcome to my portfolio. This repository acts as a platform to showcase my codin
 * A simple matrix calculator that performs basic operations on user-inputed matrices 
 * https://github.com/emilyT0410/Portfolio/blob/main/Portfolio_2.py
   
-**PROJECT 3: Placeholder for Project 3**
-* Placeholder for description of project 3
-* *Link to repository*
+**PROJECT 3: Task Manager**
+* A simple task manager application where the user can create, delete and complete tasks
+* https://github.com/emilyT0410/Portfolio/tree/task_app
+
+**PROJECT 4: Sticky Notes Application**
+* A sticky notes web-based application built using Django, Python, HTML and CSS
+* https://github.com/emilyT0410/Portfolio/tree/sticky_notes_app
